@@ -1,1 +1,2 @@
-# angular-project Glory kickboxing fighters
+# angular-project - Glory kickboxing fighters
+###### By Nouaaman
