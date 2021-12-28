@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, Subject } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from "@angular/fire/firestore";
-import { Film } from "src/app/models/films.model";
+import { Fighter } from "src/app/models/fighter.model";
 
 import { map } from 'rxjs/operators';
 
@@ -9,21 +9,22 @@ import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
-})
-export class FilmService {
-  private dbPath = '/films';
-  filmsRef: AngularFirestoreCollection<Film>;
+}) 
+export class FighterService {
+  private dbPath = '/fighters';
+  fightersRef: AngularFirestoreCollection<Fighter>;
   // private films?: any;
   // filmSubject = new Subject<any[]>();
 
   constructor(
     private db: AngularFirestore
   ) {
-    this.filmsRef = db.collection(this.dbPath);
+    this.fightersRef = db.collection(this.dbPath);
   }
 
-  getAllFilms(): any {
-    return this.filmsRef.snapshotChanges().pipe(
+  getAllFighters(): any {
+
+    return this.fightersRef.snapshotChanges().pipe(
       map((changes: any) => {
         return changes.map((doc: any) => {
           return ({ id: doc.payload.doc.id, ...doc.payload.doc.data() })
@@ -32,9 +33,9 @@ export class FilmService {
     );
   }
 
-  saveNEwFilm(film: Film): any {
+  saveNewFighter(fighter: Fighter): any {
     return new Observable(obs => {
-      this.filmsRef.add({ ...film }).then(() => {
+      this.fightersRef.add({ ...fighter }).then(() => {
         obs.next();
       })
     })
@@ -42,21 +43,21 @@ export class FilmService {
 
   get(id: any): any {
     return new Observable(obs => {
-      this.filmsRef.doc(id).get().subscribe(res => {
+      this.fightersRef.doc(id).get().subscribe(res => {
         obs.next({ id: res.id, ...res.data() });
       });
     });
   }
 
-  update(film: Film) {
+  update(fighter: Fighter) {
     return new Observable(obs => {
-      this.filmsRef.doc(film.id).update(film);
+      this.fightersRef.doc(fighter.id).update(fighter);
       obs.next();
     });
   }
 
   delete(id: any) {
-    this.db.doc(`films/${id}`).delete()
+    this.db.doc(`Fighter/${id}`).delete()
   }
 
 

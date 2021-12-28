@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const counter = interval(1000);
+   /*  const counter = interval(1000);
 
     counter.subscribe(
       (value) => {
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
       () => {
         console.log('Observable complete!');
       }
-    )
+    ) */
   }
 
 }

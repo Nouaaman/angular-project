@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FilmComponent } from './film/film.component';
+import { FighterComponent } from './fighter/fighter.component';
 import { FormsModule } from '@angular/forms';
-import { FilmService } from './services/film/film.service';
-import { FilmModifComponent } from './film-modif/film-modif.component';
-import { FilmNewComponent } from './film-new/film-new.component';
+import { FighterService } from './services/fighter/fighter.service';
+import { FighterEditComponent } from './fighter-edit/fighter-edit.component';
+import { FighterAddComponent } from './fighter-add/fighter-add.component';
 import { HomeComponent } from './home/home.component';
-import { FilmListComponent } from './film-list/film-list.component';
+import { FighterListComponent } from './fighter-list/fighter-list.component';
 
 import { environment } from "../environments/environment";
 import { AngularFireModule } from "@angular/fire";
@@ -19,11 +19,11 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 @NgModule({
   declarations: [
     AppComponent,
-    FilmComponent,
-    FilmModifComponent,
-    FilmNewComponent,
+    FighterComponent,
+    FighterEditComponent,
+    FighterAddComponent,
     HomeComponent,
-    FilmListComponent,
+    FighterListComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     AngularFirestoreModule
   ],
   providers: [
-    FilmService
+    FighterService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,54 @@
+<div class="row change" *ngIf="change">
+  <div class="col-12">
+    The changes have been saved.
+  </div>
+</div>
+<div *ngIf="fighter">
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Full Name</label><br>
+        <input type="text" class="form-control" [(ngModel)]="fighter.fullName">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Nationality </label><br>
+        <input type="text" class="form-control" [(ngModel)]="fighter.country">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Weightclass</label><br>
+        <input type="text" class="form-control" [(ngModel)]="fighter.weightclass">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Record</label><br>
+        <input type="text" class="form-control" [(ngModel)]="fighter.record">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Picture</label> <br>
+        <input type="text" class="form-control" [(ngModel)]="fighter.picture">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12">
+      <div class="submit">
+        <button class="btn btn-outline-success" (click)="edit()">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>

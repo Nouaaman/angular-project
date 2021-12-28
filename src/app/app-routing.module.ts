@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FilmListComponent } from './film-list/film-list.component';
-import { FilmModifComponent } from './film-modif/film-modif.component';
-import { FilmNewComponent } from './film-new/film-new.component';
+import { FighterListComponent } from './fighter-list/fighter-list.component';
+import { FighterEditComponent } from './fighter-edit/fighter-edit.component';
+import { FighterAddComponent } from './fighter-add/fighter-add.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'films',
-    component: FilmListComponent
+    path: 'fighters',
+    component: FighterListComponent
   },
   {
-    path: 'new',
-    component: FilmNewComponent
+    path: 'add',
+    component: FighterAddComponent
   },
   {
-    path: 'modif/:id',
-    component: FilmModifComponent
+    path: 'edit/:id',
+    component: FighterEditComponent
   },
   {
     path: '',

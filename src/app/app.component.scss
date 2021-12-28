@@ -1,3 +1,41 @@
-.navbar-right{
-    color: white !important;
+
+.navbar {
+    padding: 20px 20px;
+   height: 80px;
+   background-color: #141414;
+   
+    #logo {
+        max-width: 160px;
+        margin-right: 100px;
+        background-color: #FFF;
+        padding: 8px;
+    }
+
+    ul li {
+        font-size: 18px;
+        margin: 0 25px;
+
+        &.active {
+            a {
+                color: #C30000;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+            color: #C30000;
+        }
+    }
+}
+.container{
+    min-height: calc(100vh - 80px);//-navbar height
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
