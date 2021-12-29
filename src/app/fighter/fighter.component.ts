@@ -17,31 +17,14 @@ export class FighterComponent implements OnInit {
 
 
   constructor(
-    private Film: FighterService
+    private Fighter: FighterService
   ) { }
 
   ngOnInit(): void {
   }
 
-  // getOnAir() {
-  //   return this.fighterOnAir;
-  // }
-
-  onWatchFilm() {
-    console.log('Je regarde le Film');
-  }
-
-  // changeColor() {
-  //   return this.fighterOnAir ? 'purple' : 'red';
-  // }
-
-  onSwitch() {
-    // this.Film.switchOnAir(this.index);
-    console.log('Switch le Film');
-  }
-
-  supp(): void {
-    this.Film.delete(this.id);
+  delete(): void {
+    this.Fighter.delete(this.id);
   }
 
 }
