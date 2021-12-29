@@ -1,27 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
 
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-body{
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('/assets/badr-hari.jpg');
+
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2)), url('/assets/badr-hari.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     background-attachment: fixed;
-    
+
 }
-h1{
+
+h1 {
     margin: 20px;
 }
-li{
+
+li {
     display: flex;
     justify-content: center;
-    input{
+
+    input {
         margin-top: 20px;
     }
 }
-

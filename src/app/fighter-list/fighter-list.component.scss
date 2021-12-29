@@ -1,0 +1,18 @@
+.boxes {
+    width: 95vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    // background-color: green;
+}
+
+@media only screen and (max-width: 500px) {
+    .boxex {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

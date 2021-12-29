@@ -1,4 +1,4 @@
-<li [ngClass]=" { 'list-group-item': true}">
+<!-- <li [ngClass]=" { 'list-group-item': true}">
   <div class="row">
     <div class="col-2">
       <img class="affiche img-fluid img-responsive" [src]="fighterPicture">
@@ -14,14 +14,37 @@
       </div>
       <button class="btn btn-outline-success">Regarder</button> <br>
       <button class="btn btn-outline-info">Switch</button>
-      <!-- <button class="btn btn-outline-success" (click)="onWatchFilm()">Regarder</button> <br>
-      <button class="btn btn-outline-info" (click)="onSwitch()">Switch</button> -->
+      <button class="btn btn-outline-success" (click)="onWatchFilm()">Regarder</button> <br>
+      <button class="btn btn-outline-info" (click)="onSwitch()">Switch</button> 
     </div>
     <div class="col-2">
       <a [routerLink]="['/edit', id]" class="btn btn-warning">M</a>
-      <!-- <button class="btn btn-danger">X</button> -->
+      <button class="btn btn-danger">X</button> 
       <button class="btn btn-danger" (click)="supp()">X</button>
 
     </div>
   </div>
-</li>
+</li> -->
+
+<div class="box">
+  <div class="weightClass">
+    <p>{{fighterWeightclass}}</p>
+  </div>
+  <img [src]='fighterPicture' alt="">
+  <div class="action-buttons">
+    <a [routerLink]="['/edit', id]" class="btn edit">
+      <img src="../../assets/icons-edit.png" alt="">
+    </a>
+    <button class="btn delete">
+      <img src="../../assets/icons-delete.png" alt="">
+    </button>
+  </div>
+  <div class="info">
+    <div class="content">
+      <h2 class="name">{{fighterFullName}} </h2>
+      <p class="record"> Age : {{fighterAge}}</p>
+      <p class="record">{{fighterRecord}}</p>
+      <p class="country">{{fighterCountry}}</p>
+    </div>
+  </div>
+</div>
