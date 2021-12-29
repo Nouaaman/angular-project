@@ -19,7 +19,7 @@ const routes: Routes = [
     component: FighterEditComponent
   },
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   }
 ];
