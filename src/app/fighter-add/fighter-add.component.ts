@@ -9,6 +9,7 @@ import { FighterService } from '../services/fighter/fighter.service';
 })
 export class FighterAddComponent implements OnInit {
   public fighter!: Fighter
+  added: boolean = false;
   constructor(
     private Fighter: FighterService
   ) { }
@@ -19,6 +20,10 @@ export class FighterAddComponent implements OnInit {
   add() {
     this.Fighter.saveNewFighter(this.fighter).subscribe(() => {
       this.fighter = new Fighter()
+      this.added = true;
+      setTimeout(() => {
+        this.added = false;
+      }, 3000);
     })
 
   }

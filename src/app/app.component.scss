@@ -6,9 +6,12 @@
    
     #logo {
         max-width: 160px;
-        margin-right: 100px;
+       
         background-color: #FFF;
         padding: 8px;
+    }
+    .navbar-brand{
+        margin-right: 100px;
     }
 
     ul li {
@@ -17,7 +20,7 @@
 
         &.active {
             a {
-                color: #C30000;
+                color: #ff5656;
             }
         }
     }
@@ -27,7 +30,7 @@
         color: #fff;
 
         &:hover {
-            color: #C30000;
+            color: #ff5656;
         }
     }
 }
@@ -35,7 +38,8 @@
     background-color: #141414;
 }
 .container{
-    // padding-top: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     min-height: calc(100vh - 80px);//-navbar height
     min-width: 100vw;
     display: flex;

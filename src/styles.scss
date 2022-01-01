@@ -8,13 +8,13 @@
 }
 
 body {
-    background: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2)), url('/assets/badr-hari.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('/assets/badr-hari.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     background-attachment: fixed;
-
+    overflow-x: hidden;
 }
 
 h1 {

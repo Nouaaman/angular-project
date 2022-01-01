@@ -1,59 +1,71 @@
-<div class="row change" *ngIf="change">
-  <div class="col-12">
-    The changes have been saved.
-  </div>
-</div>
-<div *ngIf="fighter">
-  <div class="row">
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <label>Full Name</label><br>
-        <input type="text" class="form-control" [(ngModel)]="fighter.fullName">
-      </div>
-    </div>
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <label>Age </label><br>
-        <input type="number" class="form-control" [(ngModel)]="fighter.age">
-      </div>
-    </div>
+<div class="form-container">
+
+  <div class="row mt-4 mb-4 text-center">
+    <h2>Edit fighter</h2>
   </div>
 
-  <div class="row">
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <label>Weightclass</label><br>
-        <input type="text" class="form-control" [(ngModel)]="fighter.weightclass">
+  <div *ngIf="fighter">
+    <div class="row mb-4">
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <label>Full Name</label><br>
+          <input type="text" class="form-control" [(ngModel)]="fighter.fullName">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <label>Age </label><br>
+          <input type="number" class="form-control" [(ngModel)]="fighter.age">
+        </div>
       </div>
     </div>
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <label>Record</label><br>
-        <input type="text" class="form-control" [(ngModel)]="fighter.record">
-      </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <label>Nationality </label><br>
-        <input type="text" class="form-control" [(ngModel)]="fighter.country">
+    <div class="row mb-4">
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <label>Weightclass</label><br>
+          <select class="form-select" id="weightclass" [(ngModel)]="fighter.weightclass">
+            <option value="Heavyweight" selected>Heavyweight - No weight limit</option>
+            <option value="Light Heavyweight">Light Heavyweight &lt; 95 kg</option>
+            <option value="Middleweight">Middleweight &lt; 84 kg</option>
+            <option value="Welterweight">Welterweight &lt; 77 kg</option>
+            <option value="Lightweight">Lightweight &lt; 70 kg</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <label>Record <span class="small text-muted">Wins-Losses-Draws (KOs)</span></label><br>
+          <input type="text" class="form-control" [(ngModel)]="fighter.record">
+        </div>
       </div>
     </div>
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <label>Picture</label> <br>
-        <input type="text" class="form-control" [(ngModel)]="fighter.picture">
+
+    <div class="row mb-4">
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <label>Nationality </label><br>
+          <input type="text" class="form-control" [(ngModel)]="fighter.country">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <label>Picture</label> <br>
+          <input type="text" class="form-control" [(ngModel)]="fighter.picture">
+        </div>
       </div>
     </div>
-  </div>
+    <div class="row mb-4 change" *ngIf="change">
+      <div class="col-12 text-success">
+        The changes have been saved.
+      </div>
+    </div>
 
-
-  <div class="row">
-    <div class="col-12">
-      <div class="submit">
-        <button class="btn btn-outline-success" (click)="edit()">Edit</button>
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="submit text-center">
+          <button class="btn-edit" (click)="edit()"><img src="../../assets/edit-50.png" alt="" srcset=""></button>
+        </div>
       </div>
     </div>
   </div>

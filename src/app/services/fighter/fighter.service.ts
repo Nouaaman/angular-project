@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
-}) 
+})
 export class FighterService {
   private dbPath = '/fighters';
   fightersRef: AngularFirestoreCollection<Fighter>;
@@ -17,7 +17,8 @@ export class FighterService {
   constructor(
     private db: AngularFirestore
   ) {
-    this.fightersRef = db.collection(this.dbPath);
+    this.fightersRef = db.collection(this.dbPath, ref =>
+      ref.orderBy('record', 'asc'));
   }
 
   getAllFighters(): any {
