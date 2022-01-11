@@ -1,0 +1,18 @@
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 23px;
+    color:#fff;
+    gap: 22px;
+    font-size: 22px;
+}
+p{
+    text-align: justify;
+    max-width: 700px;
+}
+span{
+    color: rgb(202, 202, 202);
+}

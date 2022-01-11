@@ -4,6 +4,7 @@ import { FighterListComponent } from './fighter-list/fighter-list.component';
 import { FighterEditComponent } from './fighter-edit/fighter-edit.component';
 import { FighterAddComponent } from './fighter-add/fighter-add.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,9 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },{
+    path: 'about',
+    component: AboutComponent
   }
   
 ];

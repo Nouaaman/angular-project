@@ -14,6 +14,7 @@ import { FighterListComponent } from './fighter-list/fighter-list.component';
 import { environment } from "../environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     FighterAddComponent,
     HomeComponent,
     FighterListComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
